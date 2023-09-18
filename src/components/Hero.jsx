@@ -885,11 +885,18 @@ const Hero = () => {
                 offset="100%"
                 initial={{ stopColor: "#A418BA" }}
                 animate={{
-                  stopColor: ["#824BEA", "#6239B1", "#7403A9", "#7403A9"],
+                  stopColor: [
+                    "#824BEA",
+                    "#6239B1",
+                    "#7403A9",
+                    "#7403A9",
+                    "#824BEA",
+                  ],
                 }}
                 transition={{
-                  duration: 12,
+                  duration: 15,
                   repeat: Infinity,
+                  ease: "easeIn",
                 }}
               />
             </motion.linearGradient>
