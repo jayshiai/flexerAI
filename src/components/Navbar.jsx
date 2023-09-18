@@ -2,7 +2,7 @@ import { TbSquareRotatedFilled } from "react-icons/tb";
 
 const Navbar = () => {
   return (
-    <nav className="w-screen absolute z-50">
+    <nav className="hidden lg:block w-screen absolute z-50">
       <div className="navbar  text-white w-[80vw] h-24 flex justify-around m-auto items-center ">
         <div className="font-extrabold text-lg opacity-50 cursor-pointer hover:opacity-100">
           EVENTS
