@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} overflow-x-clip`}>
         <Navbar />
-        <MouseTrail />
+
         {children}
       </body>
     </html>

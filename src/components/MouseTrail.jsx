@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 const MouseTrail = () => {
@@ -12,14 +12,17 @@ const MouseTrail = () => {
 
   useEffect(() => {
     const moveCursor = (e) => {
-      cursorX.set(e.clientX - 16);
-      cursorY.set(e.clientY - 16);
+      cursorX.set(e.clientX - 25);
+      cursorY.set(e.clientY - 25);
     };
+
     window.addEventListener("mousemove", moveCursor);
+
     return () => {
       window.removeEventListener("mousemove", moveCursor);
     };
   }, []);
+
   return (
     <motion.div
       className="cursor"
