@@ -13,21 +13,25 @@ const Hero = () => {
 
     paths.forEach((path) => {
       // Change the fill attribute to url(#gradient)
+
       if (fill === "url(#gradient)") {
         // Change it to #414141
         path.setAttribute("fill", "#414141");
+
         setStrokeWidth([7, 15]);
         setDuration([3, 1]);
         setOpacity([0, 0.3]);
       } else if (fill === "#414141") {
         // Change it to url(#gradient)
         path.setAttribute("fill", "url(#gradient)");
+
         setStrokeWidth([15, 25]);
         setDuration([0.5, 0.25]);
         setOpacity([1, 1]);
       }
     });
   };
+
   const reactorVariants = {
     start: {
       rotate: [0, 370],
@@ -46,6 +50,7 @@ const Hero = () => {
       },
     },
   };
+
   const circleVariants = {
     start: {
       strokeWidth: strokeWidth[0],
@@ -54,6 +59,7 @@ const Hero = () => {
       strokeWidth: strokeWidth[1],
     },
   };
+
   return (
     <section className="w-screen flex justify-center items-center">
       <div className="hero_background translate-y-[-15%] w-[75vw]    flex justify-center items-center">
