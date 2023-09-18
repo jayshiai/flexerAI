@@ -6,8 +6,13 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --gradient-angle: 0deg;
 }
-
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -24,4 +29,32 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+
+.reactor {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+
+  background: conic-gradient(
+    from var(--gradient-angle),
+    #A418BA,
+    #ba3cfd,
+    #420485,
+    #A418BA
+  );  
+  filter: blur(1rem);
+  animation: rotation 2s linear infinite;
+   transition: all ease;
+}
+.logo:hover + .reactor{
+  width: 150px;
+  height: 150px;
+  animation: rotation 1s linear infinite;
+  transition: all ease;
+}
+@keyframes rotation{
+ 0% {--gradient-angle :0deg;}
+ 100% {--gradient-angle :360deg;}
 }
