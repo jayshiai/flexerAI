@@ -854,19 +854,25 @@ const Hero = () => {
             </motion.g>
 
             <g id="docking_lines" clip-path="url(#clip0_53_462)">
-              <path
+              <motion.path
                 id="Vector_145"
                 d="M44.5722 1418.77V1071.73"
                 stroke="url(#paint0_linear_53_462)"
                 stroke-width="3"
                 stroke-linecap="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 3 }}
               />
-              <path
+              <motion.path
                 id="Vector_146"
                 d="M253 998V1022.4C253 1089.43 210.872 1143.77 158.905 1143.77H109.381C73.8243 1143.77 45 1180.95 45 1226.82V1261"
                 stroke="url(#paint1_linear_53_462)"
                 stroke-width="3"
                 stroke-linecap="round"
+                initial={{ pathLength: 0 }}
+                animate={{ pathLength: 1 }}
+                transition={{ duration: 3 }}
               />
               <circle id="Ellipse 1" cx="45" cy="1067" r="5" fill="#D9D9D9" />
               <circle id="Ellipse 2" cx="252" cy="994" r="5" fill="#D9D9D9" />
