@@ -41,6 +41,7 @@ const Hero = () => {
         ease: "linear",
       },
     },
+
     hover: {
       rotate: [0, 370],
       transition: {
