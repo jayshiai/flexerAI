@@ -1,7 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import MouseTrail from "@/components/MouseTrail";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
