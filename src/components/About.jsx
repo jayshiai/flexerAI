@@ -36,6 +36,77 @@ const About = () => {
             transform: `translate(0,${height + 5}px)`,
           }}
         >
+          <svg
+            viewBox="0 0 346 530"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-[530px]"
+          >
+            <g clip-path="url(#clip0_10_181)">
+              <motion.path
+                d="M10.5723 528.769V181.726"
+                stroke="url(#docking_line_1)"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <motion.path
+                d="M219 108V132.397C219 199.431 176.872 253.771 124.905 253.771H75.381C39.8243 253.771 11 290.952 11 336.818V371"
+                stroke="url(#docking_line_2)"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <circle cx="11" cy="177" r="5" fill="#D9D9D9" />
+              <circle cx="218" cy="104" r="5" fill="#D9D9D9" />
+            </g>
+            <defs>
+              <motion.linearGradient
+                id="docking_line_1"
+                x1="15.0361"
+                y1="646"
+                x2="15.0362"
+                y2="220"
+                gradientUnits="userSpaceOnUse"
+                initial={{ gradientTransform: "rotate(0)" }}
+                animate={{ gradientTransform: "rotate(75)" }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  repeatType: "reverse",
+                  ease: "easeOut",
+                }}
+              >
+                <stop stop-color="#D2A8FF" />
+                <stop offset="0.0908581" stop-color="#A371F7" />
+                <stop offset="0.50056" stop-color="#6639BA" />
+                <stop offset="0.8908581" stop-color="#A371F7" />
+              </motion.linearGradient>
+
+              <motion.linearGradient
+                id="docking_line_2"
+                x1="-118"
+                y1="546"
+                x2="400.987"
+                y2="-33.662"
+                gradientUnits="userSpaceOnUse"
+                initial={{ gradientTransform: "rotate(0)" }}
+                animate={{ gradientTransform: "rotate(70)" }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeIn",
+                }}
+              >
+                <stop stop-color="#A371F7" />
+                <stop offset="0.00733964" stop-color="#9E72D3" />
+                <stop offset="0.251918" stop-color="#6639BA" stop-opacity="0" />
+                <stop offset="0.325848" stop-color="#6639BA" />
+                <stop offset="0.90733964" stop-color="#9E72D3" />
+              </motion.linearGradient>
+              <clipPath id="clip0_10_181">
+                <rect width="346" height="530" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
           <FiCode />
           <motion.div
             style={{

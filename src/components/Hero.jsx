@@ -906,29 +906,6 @@ const Hero = () => {
               fill="white"
             />
           </motion.g>
-
-          <g
-            id="docking_lines"
-            clip-path="url(#clip0_53_462)"
-            className="absoulte lg:block"
-          >
-            <path
-              id="Vector_145"
-              d="M44.5722 1418.77V1071.73"
-              stroke="url(#paint0_linear_53_462)"
-              stroke-width="3"
-              stroke-linecap="round"
-            />
-            <path
-              id="Vector_146"
-              d="M253 998V1022.4C253 1089.43 210.872 1143.77 158.905 1143.77H109.381C73.8243 1143.77 45 1180.95 45 1226.82V1261"
-              stroke="url(#paint1_linear_53_462)"
-              stroke-width="3"
-              stroke-linecap="round"
-            />
-            <circle id="Ellipse 1" cx="45" cy="1067" r="5" fill="#D9D9D9" />
-            <circle id="Ellipse 2" cx="252" cy="994" r="5" fill="#D9D9D9" />
-          </g>
         </g>
         <defs>
           <motion.linearGradient
@@ -986,49 +963,6 @@ const Hero = () => {
               result="effect1_foregroundBlur_53_462"
             />
           </filter>
-          <motion.linearGradient
-            id="paint0_linear_53_462"
-            x1="15.0361"
-            y1="646"
-            x2="15.0362"
-            y2="220"
-            gradientUnits="userSpaceOnUse"
-            initial={{ gradientTransform: "rotate(0)" }}
-            animate={{ gradientTransform: "rotate(75)" }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "easeOut",
-            }}
-          >
-            <stop stop-color="#D2A8FF" />
-            <stop offset="0.0908581" stop-color="#A371F7" />
-            <stop offset="0.50056" stop-color="#6639BA" />
-            <stop offset="0.8908581" stop-color="#A371F7" />
-          </motion.linearGradient>
-
-          <motion.linearGradient
-            id="paint1_linear_53_462"
-            x1="-118"
-            y1="546"
-            x2="400.987"
-            y2="-33.662"
-            gradientUnits="userSpaceOnUse"
-            initial={{ gradientTransform: "rotate(0)" }}
-            animate={{ gradientTransform: "rotate(70)" }}
-            transition={{
-              duration: 3,
-              repeat: Infinity,
-              ease: "easeIn",
-            }}
-          >
-            <stop stop-color="#A371F7" />
-            <stop offset="0.00733964" stop-color="#9E72D3" />
-            <stop offset="0.251918" stop-color="#6639BA" stop-opacity="0" />
-            <stop offset="0.325848" stop-color="#6639BA" />
-            <stop offset="0.90733964" stop-color="#9E72D3" />
-          </motion.linearGradient>
 
           <linearGradient
             id="paint2_linear_53_462"
