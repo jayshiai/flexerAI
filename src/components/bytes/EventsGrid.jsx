@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { GoBriefcase } from "react-icons/go";
 import React, { useEffect, useRef } from "react";
 import EventCardShort from "./EventCardShort";
+import EventCardLong from "./EventCardLong";
 const EventsGrid = () => {
   const cardsRef = useRef(null);
 
@@ -56,7 +57,7 @@ const EventsGrid = () => {
           ref={cardsRef}
           className=" w-full max-w-[916px] grid grid-cols-3 gap-2"
         >
-          <EventCardShort />
+          <EventCardLong className="col-span-2" />
           <EventCardShort />
           <EventCardShort />
           <EventCardShort />

@@ -162,10 +162,9 @@ body {
   border-radius: 10px;
   cursor: pointer;
   display: flex;
-  height: 260px;
   flex-direction: column;
   position: relative;
-  width: 300px;
+
   transform-style: preserve-3d;
   transform: perspective(700px) rotateX(var(--rotateX)) rotateY(var(--rotateY));
 }

@@ -18,7 +18,6 @@ const EventCardShort = () => {
     // Update position state
 
     setRotation({ x, y });
-    // Update letters state with a new random string
   };
 
   // Define a function that resets the rotation state to zero
@@ -47,7 +46,7 @@ const EventCardShort = () => {
         "--rotateY": `${rotation.x}deg`,
         "--rotateX": `${rotation.y}deg`,
       }}
-      className="eventCard"
+      className="eventCard w-[300px] h-[260px]"
     >
       <div className="eventCard-content"></div>
     </div>
