@@ -1,6 +1,11 @@
+"use client";
+import Tag from "./bytes/Tag";
+import { HiArrowRight } from "react-icons/hi";
+import { FiCode } from "react-icons/fi";
+import { motion } from "framer-motion";
 const Events = () => {
   return (
-    <div className="flex lg:w-[75vw]  ">
+    <div className="flex lg:w-[75vw]">
       <div className="w-[10%] text-3xl flex justify-center">
         <div className="flex flex-col justify-center items-center absolute">
           <FiCode />
@@ -34,12 +39,7 @@ const Events = () => {
           <p className=" tracking-widest font-light opacity-30">
             Sponsored by leading organisations
           </p>
-          <div className="flex justify-between mt-3 items-center w-1/2">
-            <Image src="/assets/sponsor1.png" height={50} width={97} />
-            <Image src="/assets/sponsor2.png" height={50} width={143} />
-            <Image src="/assets/sponsor3.png" height={37} width={84} />
-            <Image src="/assets/sponsor4.png" height={31} width={124} />
-          </div>
+          <div className="flex justify-between mt-3 items-center w-1/2"></div>
         </div>
       </div>
     </div>

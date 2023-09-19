@@ -25,7 +25,10 @@ const About = () => {
   }, []);
 
   return (
-    <div className="flex lg:w-[75vw]  " style={{ marginTop: `-${height}px` }}>
+    <div
+      className="flex lg:w-[75vw] mb-24  "
+      style={{ marginTop: `-${height}px` }}
+    >
       <div className="w-[10%] text-3xl flex justify-center">
         <div
           className="flex flex-col justify-center items-center absolute"
@@ -42,7 +45,7 @@ const About = () => {
               repeatType: "reverse",
               duration: 2,
             }}
-            className="w-[3px] h-[400px] rounded-xl"
+            className="w-[3px] h-[450px] rounded-xl"
           ></motion.div>
         </div>
       </div>
