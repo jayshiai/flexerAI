@@ -29,9 +29,9 @@ const About = () => {
       className="flex lg:w-[75vw] mb-24"
       style={{ marginTop: `-${height}px` }}
     >
-      <div className="w-[10%] text-3xl flex justify-center">
+      <div className="w-[8%] text-3xl flex justify-center relative ">
         <div
-          className="flex flex-col justify-center items-center absolute "
+          className="flex flex-col  items-center absolute h-full "
           style={{
             transform: `translate(0,${height + 5}px)`,
           }}
@@ -47,18 +47,16 @@ const About = () => {
               repeatType: "reverse",
               duration: 2,
             }}
-            className="w-[3px] h-[500px] rounded-xl"
+            className="w-[3px] h-full rounded-xl"
           ></motion.div>
         </div>
       </div>
-      <div>
+      <div className="w-full">
         <Tag text="About" icon={<HiArrowRight />} />
-        <div className="text-7xl font-semibold mt-7 mb-3">
-          TantraFiest is here!
-        </div>
-        <div className="text-3xl  w-[80%] opacity-50 mb-16">
+        <div className="text-7xl font-semibold mt-16 mb-10">TantraFiest is</div>
+        <div className="tracking-wider font-light text-3xl  w-[80%] opacity-50 mb-16">
           the annual science and technology festival of the Indian Institute of
-          Information Technology, Nagpur is back!
+          Information Technology, Nagpur.
         </div>
         <a className="w-[300px] h-[70px] mb-16 text-5xl rounded-xl flex justify-center  items-center bg-[#BE30D5] cursor-pointer">
           Get Started

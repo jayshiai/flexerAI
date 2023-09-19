@@ -119,7 +119,7 @@ const Hero = () => {
             animate={textState ? "visible" : "hidden"}
           />
 
-          <g id="main_bg" fill="url(#myGradient)">
+          <g id="main_bg">
             <motion.g
               id="Group"
               animate={{ opacity: opacity }}
