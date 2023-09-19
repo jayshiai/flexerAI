@@ -26,16 +26,28 @@ const Hero = () => {
         // Change it to #414141
         path.setAttribute("fill", "#414141");
 
-        setStrokeWidth([7, 15]);
-        setDuration([3, 1]);
+        if (window.innerWidth < 1024) {
+          setStrokeWidth([15, 20]);
+          setDuration([1, 0.5]);
+        } else {
+          setStrokeWidth([7, 15]);
+          setDuration([3, 1]);
+        }
+
         setOpacity([0, 0.3]);
         setTextState(false);
       } else if (fill === "#414141") {
         // Change it to url(#gradient)
         path.setAttribute("fill", "url(#gradient)");
 
-        setStrokeWidth([15, 25]);
-        setDuration([0.5, 0.25]);
+        if (window.innerWidth < 1024) {
+          setStrokeWidth([20, 25]);
+          setDuration([0.3, 0.1]);
+        } else {
+          setStrokeWidth([15, 20]);
+          setDuration([0.5, 0.25]);
+        }
+
         setOpacity([1, 1]);
         setTextState(true);
       }

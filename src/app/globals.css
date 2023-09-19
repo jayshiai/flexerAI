@@ -7,6 +7,12 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
   --gradient-angle: 0deg;
+
+  --primary-color: mediumslateblue;
+  --background-light-rgb: 30 41 59;
+  --main-rgb: 41 121 255;
+  --main-light-rgb: 56 182 255;
+  --secondary-rgb: 42 252 152;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,4 +44,112 @@ body {
   mix-blend-mode: difference;
   z-index: 999;
   pointer-events: none;
+}
+
+.card-gradient {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: radial-gradient(
+    rgb(var(--background-light-rgb)) 40%,
+    rgb(var(--main-rgb)) 50%,
+    rgb(var(--main-light-rgb)),
+    rgb(var(--secondary-rgb))
+  );
+  mix-blend-mode: darken;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.card-letters {
+  opacity: 0;
+  transition: opacity 400ms;
+  -webkit-mask-image: radial-gradient(
+    calc(400px * 0.6) circle at var(--x) var(--y),
+    rgb(255 255 255) 20%,
+    rgb(255 255 255 / 25%),
+    transparent
+  );
+  scale: 1.03;
+}
+
+.card:hover .card-letters {
+  opacity: 1;
+}
+
+.card_body {
+  position: relative;
+}
+.card_body:after {
+  content: "";
+  height: 70px;
+  width: 1px;
+  position: absolute;
+  left: -1px;
+  top: 65%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(transparent, var(--primary-color), transparent);
+  opacity: 0;
+}
+
+.card_body:after {
+  top: 65%;
+  opacity: 0;
+}
+
+.card_body:hover:after {
+  top: 25%;
+  opacity: 1;
+}
+
+.card-body {
+  width: 640px;
+
+  background-color: rgb(16 16 16);
+  border: 1px solid rgb(255 255 255 / 5%);
+  border-radius: 1.5rem;
+  padding: 1rem;
+}
+
+.card-body:after {
+  content: "";
+  height: 70px;
+  width: 1px;
+  position: absolute;
+  left: -1px;
+  top: 65%;
+  transition: top, opacity;
+  transition-duration: 600ms;
+  transition-timing-function: ease;
+  background: linear-gradient(transparent, var(--primary-color), transparent);
+  opacity: 0;
+}
+
+.card-body:after {
+  top: 65%;
+  opacity: 0;
+}
+
+.card-body:hover:after {
+  top: 25%;
+  opacity: 1;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1) 1px,
+    transparent 1px
+  );
+  background-position: 50% 50%;
+  background-size: 1.1rem 1.1rem;
+  padding: 4rem;
+  border-radius: 1.25rem;
+  overflow: hidden;
 }

@@ -752,7 +752,7 @@ const FindMore = () => {
         <div className="mt-[125px] max-w-[140px] h-[35px] cursor-pointer rounded-full border-[#A418BA] border text-[#A418BA]  flex justify-center items-center">
           Interested ?
         </div>
-        <div className=" flex mt-[25px] text-7xl font-semibold  mb-5 text-[#A418BA]">
+        <div className=" flex mt-[25px] text-5xl sm:text-7xl font-semibold  mb-5 text-[#A418BA]">
           Find More
           <span className="ml-6">
             <HiArrowRight />
