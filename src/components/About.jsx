@@ -26,13 +26,15 @@ const About = () => {
 
   return (
     <div
-      className="flex lg:w-[75vw] mb-24  "
+      className="flex lg:w-[75vw] mb-24"
       style={{ marginTop: `-${height}px` }}
     >
       <div className="w-[10%] text-3xl flex justify-center">
         <div
-          className="flex flex-col justify-center items-center absolute"
-          style={{ transform: `translate(0,${height + 5}px)` }}
+          className="flex flex-col justify-center items-center absolute "
+          style={{
+            transform: `translate(0,${height + 5}px)`,
+          }}
         >
           <FiCode />
           <motion.div
@@ -45,13 +47,13 @@ const About = () => {
               repeatType: "reverse",
               duration: 2,
             }}
-            className="w-[3px] h-[450px] rounded-xl"
+            className="w-[3px] h-[500px] rounded-xl"
           ></motion.div>
         </div>
       </div>
       <div>
         <Tag text="About" icon={<HiArrowRight />} />
-        <div className="text-[85px] font-semibold mt-7 mb-3">
+        <div className="text-7xl font-semibold mt-7 mb-3">
           TantraFiest is here!
         </div>
         <div className="text-3xl  w-[80%] opacity-50 mb-16">

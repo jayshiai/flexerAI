@@ -24,7 +24,7 @@ const Events = () => {
         </div>
       </div>
       <div>
-        <Tag text="About" icon={<HiArrowRight />} />
+        <Tag text="Events" icon={<HiArrowRight />} />
         <div className="text-[85px] font-semibold mt-7 mb-3">
           TantraFiest is here!
         </div>
