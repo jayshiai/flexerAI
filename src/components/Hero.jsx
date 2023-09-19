@@ -6,17 +6,17 @@ const Hero = () => {
   var [strokeWidth, setStrokeWidth] = useState([7, 15]);
   var [duration, setDuration] = useState([3, 1]);
   var [opacity, setOpacity] = useState([0.3, 0]);
-  var [scrollState, setScrollState] = useState(0);
+  //var [scrollState, setScrollState] = useState(0);
   var [textState, setTextState] = useState(false);
 
   const changeFill = () => {
     var group = document.getElementById("Group");
     var paths = group.querySelectorAll("path");
-    var body = document.getElementsByTagName("body");
-    if (scrollState == 0) {
-      setScrollState(1);
-      body[0].style.overflowY = "auto";
-    }
+    //var body = document.getElementsByTagName("body");
+    // if (scrollState == 0) {
+    //   setScrollState(1);
+    //   body[0].style.overflowY = "auto";
+    // }
     var fill = paths[0].getAttribute("fill");
 
     paths.forEach((path) => {
@@ -95,11 +95,11 @@ const Hero = () => {
     },
   };
   return (
-    <div className="hero_background lg:translate-y-[-15%]  w-[100vw]  lg:w-[75vw]    flex justify-center items-center">
+    <div className="hero_background lg:mt-[-15%]  w-[100vw]  lg:w-[75vw]    flex justify-center items-center">
       <svg
         viewBox="0 0 1248 1420"
         xmlns="http://www.w3.org/2000/svg"
-        className="z-[5]"
+        className=" w-full"
       >
         <g id="hero-background">
           <motion.path
