@@ -32,45 +32,18 @@ const About = () => {
           style={{ transform: `translate(0,${height + 5}px)` }}
         >
           <FiCode />
-          <svg
-            width="4"
-            height="404"
-            viewBox="0 0 4 404"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className=""
-          >
-            <path
-              id="dock_connection"
-              d="M2 402V2"
-              stroke="url(#docking_animation)"
-              stroke-width="3"
-              stroke-linecap="round"
-            />
-            <defs>
-              <motion.linearGradient
-                id="docking_animation"
-                x1="15.0361"
-                y1="646"
-                x2="15.0362"
-                y2="220"
-                gradientUnits="userSpaceOnUse"
-                initial={{ gradientTransform: "rotate(0)" }}
-                animate={{ gradientTransform: "rotate(75)" }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  ease: "easeOut",
-                }}
-              >
-                <stop stop-color="#37FE26" />
-                <stop offset="0.0908581" stop-color="#263CFE" />
-                <stop offset="0.40056" stop-color="#A371F7" />
-                <stop offset="0.6908581" stop-color="#A418BA" />
-              </motion.linearGradient>
-            </defs>
-          </svg>
+          <motion.div
+            style={{
+              background: `linear-gradient(#d2a8ff, #a371f7 10%, #0C14CB 50%,  #188ABA)`,
+            }}
+            animate={{ opacity: [0.4, 1] }}
+            transition={{
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 2,
+            }}
+            className="w-[3px] h-[400px] rounded-xl"
+          ></motion.div>
         </div>
       </div>
       <div>
