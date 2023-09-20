@@ -77,36 +77,11 @@ body {
   opacity: 1;
 }
 
-.card_body {
+.card-body {
   position: relative;
-}
-.card_body:after {
-  content: "";
-  height: 70px;
-  width: 1px;
-  position: absolute;
-  left: -1px;
-  top: 65%;
-  transition: top, opacity;
-  transition-duration: 600ms;
-  transition-timing-function: ease;
-  background: linear-gradient(transparent, var(--primary-color), transparent);
-  opacity: 0;
-}
-
-.card_body:after {
-  top: 65%;
-  opacity: 0;
-}
-
-.card_body:hover:after {
-  top: 25%;
-  opacity: 1;
 }
 
 .card-body {
-  width: 640px;
-
   background-color: rgb(16 16 16);
   border: 1px solid rgb(255 255 255 / 5%);
   border-radius: 1.5rem;
@@ -152,6 +127,10 @@ body {
   padding: 4rem;
   border-radius: 1.25rem;
   overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+.card-content > h3 {
+  color: var(--primary-color);
 }
 
 #eventCards:hover > .eventCard::after {
@@ -206,8 +185,7 @@ body {
   background-color: #171717;
   border-radius: inherit;
   display: flex;
-  flex-direction: column;
-  flex-grow: 1;
+
   inset: 1px;
   padding: 10px;
   position: absolute;

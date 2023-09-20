@@ -4,6 +4,7 @@ import { GoBriefcase } from "react-icons/go";
 import React, { useEffect, useRef } from "react";
 import EventCardShort from "./EventCardShort";
 import EventCardLong from "./EventCardLong";
+import GenAThon from "./GenAThon";
 const EventsGrid = () => {
   const cardsRef = useRef(null);
 
@@ -33,7 +34,7 @@ const EventsGrid = () => {
   }, []);
 
   return (
-    <div className="flex lg:w-[75vw] h-screen mt-4 relative">
+    <div className="flex w-screen lg:w-[75vw] h-screen mt-4 relative">
       <div className="w-[8%] text-3xl flex justify-center relative">
         <div className="flex flex-col justify-center items-center absolute h-full">
           <GoBriefcase className="mt-4 mb-8" />
@@ -52,17 +53,8 @@ const EventsGrid = () => {
         </div>
       </div>
       <div className="w-full ">
-        <div
-          id="eventCards"
-          ref={cardsRef}
-          className=" w-full max-w-[916px] grid grid-cols-3 gap-2"
-        >
-          <EventCardLong className="col-span-2" />
-          <EventCardShort />
-          <EventCardShort />
-          <EventCardShort />
-          <EventCardShort />
-          <EventCardShort />
+        <div id="eventCards" ref={cardsRef} className=" w-full max-w-[916px] ">
+          <GenAThon />
         </div>
       </div>
     </div>

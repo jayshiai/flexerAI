@@ -42,7 +42,7 @@ const SpeakerCard = ({ name, details, image }) => {
     };
   }, []);
   return (
-    <div className="card_body min-w-[350px] max-w-[400px] h-[500px] mb-16 border border-white/10  rounded-3xl p-2">
+    <div className="card-body min-w-[350px] max-w-[400px] h-[500px] mb-16 border border-white/10  rounded-3xl p-2">
       <div className="card_wrapper relative h-4/5">
         <div
           className="card overflow-hidden relative cursor-pointer flex justify-center items-center rounded-3xl mb-10 h-full"
