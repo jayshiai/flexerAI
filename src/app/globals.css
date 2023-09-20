@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -170,6 +184,7 @@ body {
     rgba(255, 255, 255, 0.06),
     transparent 40%
   );
+  pointer-events: none;
   z-index: 3;
 }
 
@@ -190,4 +205,38 @@ body {
   padding: 10px;
   position: absolute;
   z-index: 2;
+}
+
+.transBg {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--c1),
+    var(--c2),
+    var(--c3),
+    var(--c1)
+  );
+  background-size: 200%;
+}
+
+.transText {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+.custom_cursor {
+  width: 5px;
+  height: 5px;
+  background-color: #ffffff;
+  opacity: 1;
 }
