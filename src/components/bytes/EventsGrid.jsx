@@ -6,6 +6,7 @@ import EventCardShort from "./EventCardShort";
 import EventCardLong from "./EventCardLong";
 import GenAThon from "./GenAThon";
 import Overdrive from "./Overdrive";
+import Algorithma from "./Algorithma";
 const EventsGrid = () => {
   const cardsRef = useRef(null);
 
@@ -63,7 +64,8 @@ const EventsGrid = () => {
           <GenAThon />
 
           <Overdrive />
-          <EventCardShort />
+
+          <Algorithma />
           <EventCardShort />
         </div>
       </div>

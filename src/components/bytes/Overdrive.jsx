@@ -52,10 +52,10 @@ const Overdrive = () => {
       style={{
         "--rotateY": `${rotation.x}deg`,
         "--rotateX": `${-rotation.y}deg`,
-        "--gradientBefore": `#3ac96133`,
-        "--gradientAfter": `#3ac961aa`,
+        "--gradientBefore": `#BD394444`,
+        "--gradientAfter": `#BD3944aa`,
       }}
-      className="eventCard w-full row-span-2 h-[800px]"
+      className="eventCard w-full row-span-2 h-[800px] select-none"
     >
       <div className="eventCard-content flex relative">
         <div
@@ -97,14 +97,40 @@ const Overdrive = () => {
             gaming skills, strategic prowess, and teamwork in the popular
             tactical shooter game, Valorant
           </div>
-          <div className="w-full  h-full mt-4 rounded-2xl  flex justify-between items-center ">
-            <div className="menu h-3/4 flex flex-col justify-around">
-              <div className="flex justify-between items-center">
+          <div className="w-full h-full mt-4 rounded-2xl  flex justify-between items-center ">
+            <div className="menu w-1/4 h-3/4 flex flex-col justify-around">
+              <div className="flex justify-start group items-center cursor-pointer relative">
                 <TbSquareRotatedFilled />
-                Round 1
+                <p className="text-xl ml-2">Round 1</p>
+
+                <div className="absolute z-20 top-10 hidden group-hover:block w-[300px] bg-[#101010] p-4 rounded-2xl border border-teal-200">
+                  <span className="text-xl font-bold">KnockOut:</span>
+                  <br></br>
+                  Based on the number of entries a pool will be created which
+                  will consist of Bo1s and lead to certain elimination of teams
+                  from the tournament and the winning team proceed to the next
+                  knockout till semifinal.
+                </div>
               </div>
-              <div>Round 2</div>
-              <div>Play</div>
+              <div className="flex justify-start group items-center cursor-pointer relative">
+                <TbSquareRotatedFilled />
+                <p className="text-xl ml-2">Round 2</p>
+                <div className="absolute z-20 bottom-10 hidden group-hover:block w-[300px] bg-[#101010] p-4 rounded-2xl border border-teal-200">
+                  <span className="text-xl font-bold">Upper Bracs:</span>
+                  <br></br>
+                  The top 4 teams will compete in a Bo3 series for a spot in the
+                  finals which will again be a Bo3.
+                </div>
+              </div>
+              <div className="flex justify-start items-center cursor-pointer relative group">
+                <TbSquareRotatedFilled />
+                <p className="text-3xl font-extrabold text-[#FF4B50] ml-2">
+                  PLAY
+                  <div className="absolute z-20 top-10 hidden text-xl group-hover:block w-[300px] bg-[#101010] p-4 rounded-2xl border border-teal-200">
+                    Join the fray!
+                  </div>
+                </p>
+              </div>
             </div>
             <div className=" loadout pt-8 z-20 h-full w-2/5">
               <div
