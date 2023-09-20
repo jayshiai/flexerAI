@@ -4,8 +4,10 @@ import { useState, useEffect, useRef } from "react";
 import OrganiserBadge from "./OrganiserBadge";
 import { VscChromeMinimize, VscChromeClose } from "react-icons/vsc";
 import Typewriter from "typewriter-effect";
+import { motion } from "framer-motion";
 const GenAThon = () => {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
+  const [min, setMin] = useState(false);
   const cardRef = useRef(null);
   const [tab, setTab] = useState(0);
 
@@ -25,8 +27,8 @@ const GenAThon = () => {
     const middleX = rect.width / 2;
     const middleY = rect.height / 2;
 
-    const x = -1 * ((e.clientX - (rect.left + middleX)) / middleX) * 4;
-    const y = -1 * ((e.clientY - (rect.top + middleY)) / middleY) * 4;
+    const x = -1 * ((e.clientX - (rect.left + middleX)) / middleX) * 3;
+    const y = -1 * ((e.clientY - (rect.top + middleY)) / middleY) * 3;
 
     // Update position state
 
@@ -58,13 +60,15 @@ const GenAThon = () => {
       style={{
         "--rotateY": `${rotation.x}deg`,
         "--rotateX": `${-rotation.y}deg`,
+        "--gradientBefore": `#ffffff1f`,
+        "--gradientAfter": `#ffffffaa`,
       }}
-      className="eventCard w-full h-[400px]"
+      className="eventCard col-span-2 w-full h-[400px]"
     >
       <div className="eventCard-content flex">
         <div className="w-1/2 pl-2 h-full flex flex-col justify-between">
           <div>
-            <OrganiserBadge text="Elevate" />
+            <OrganiserBadge text="Elevate" theme="#7b1fa2" />
             <div
               style={{
                 "--c1": "#7b1fa2",
@@ -84,8 +88,13 @@ const GenAThon = () => {
             Register Now
           </a>
         </div>
-        <div className="codeBlock w-1/2 border border-white/20 h-full relative ">
-          <div className="nav border-b bg-[#101010] border-white/20 h-[10%] flex justify-between items-center px-2">
+        <motion.div
+          drag={true}
+          dragConstraints={{ top: 100, bottom: 100, left: 100, right: 100 }}
+          dragSnapToOrigin={true}
+          className="codeBlock w-1/2  h-full relative flex flex-col justify-center items-center"
+        >
+          <div className="nav w-full border bg-[#101010] border-white/20 h-[10%] flex justify-between items-center px-2">
             <div className="list text-sm flex justify-around w-1/2 z-10">
               <button
                 type="button"
@@ -113,77 +122,86 @@ const GenAThon = () => {
               </button>
             </div>
             <div className="flex w-[40px] justify-between">
-              <VscChromeMinimize className="opacity-50 hover:scale-150" />
-              <VscChromeClose className="text-red-500 hover:scale-150" />
+              <VscChromeMinimize
+                onClick={() => setMin(!min)}
+                className="opacity-50 hover:scale-110 cursor-pointer"
+              />
+              <VscChromeClose
+                onClick={() => setMin(!min)}
+                className="text-red-500 hover:scale-110 cursor-pointer"
+              />
             </div>
           </div>
-          <div className="code  bg-[#151515] h-[90%] relative">
-            {tab == 0 && (
-              <div className="absolute leading-loose text-sm p-2 top-0 left-0 h-full w-full">
-                <Typewriter
-                  options={{
-                    delay: 15,
-                    cursor: ".",
-                    cursorClassName: "custom_cursor",
-                  }}
-                  onInit={(typewriter) => {
-                    typewriter
-                      .pause(2500)
-                      .typeString(
-                        "<span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#79c0ff;'>Themes:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#ff7b72;'>- 1.</span> HealthTech Innovation<br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#ffa657;'>- 2.</span> Smart City Solutions<br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#79c0ff;'>Tracks:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#ff7b72;'>- 1.</span> AI-Driven Web Development<br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#ffa657;'>- 2.</span> ML-Enhanced App Development"
-                      )
-                      .callFunction(() => hideCursor())
-                      .start();
-                  }}
-                />
-              </div>
-            )}
-            {tab == 1 && (
-              <div className="absolute leading-loose text-sm p-2 top-0 left-0 h-full w-full overflow-y-auto no-scrollbar">
-                <Typewriter
-                  options={{
-                    delay: 15,
-                    cursor: ".",
-                    cursorClassName: "custom_cursor",
-                  }}
-                  onInit={(typewriter) => {
-                    typewriter
 
-                      .typeString(
-                        "<span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Registration Date:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#ff7b72;'>- From</span> <span style='color:#ffa657;'>08-09-2023</span> <span style='color:#ff7b72;'>To</span> <span style='color:#ffa657;'>- 24-09-2023</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Round 1:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#79c0ff;'>- 24 September, 2023 (4:00 PM - 5:00 PM)</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Round 1 Result:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#79c0ff;'>- 24 September, 2023 (7:00 PM)</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Round 2:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#79c0ff;'>- 24 September, 2023 (11:59 PM)</span> <span style='color:#ffa657;'>(Problem Statements will be given)</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Round 2 Submission:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#79c0ff;'>- 28th September, 2023</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Round 2 Result:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#79c0ff;'>- 30th September, 2023</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#ff7b72;'>Grand Finale:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#ffa657;'>- 13th October, 2023</span> <span style='color:#ff7b72;'>and</span> <span style='color:#ffa657;'>14th October, 2023</span><br>"
-                      )
-                      .callFunction(() => hideCursor())
-                      .start();
-                  }}
-                />
-              </div>
-            )}
-            {tab == 2 && (
-              <div className="absolute leading-loose text-sm p-2 top-0 left-0 h-full w-full">
-                <Typewriter
-                  options={{
-                    delay: 15,
-                    cursor: ".",
-                    cursorClassName: "custom_cursor",
-                  }}
-                  onInit={(typewriter) => {
-                    typewriter
+          {!min && (
+            <div className="code w-full border-b border-x border-white/20 bg-[#151515] h-[90%] relative">
+              {tab == 0 && (
+                <div className="absolute leading-loose text-sm p-2 top-0 left-0 h-full w-full">
+                  <Typewriter
+                    options={{
+                      delay: 15,
+                      cursor: ".",
+                      cursorClassName: "custom_cursor",
+                    }}
+                    onInit={(typewriter) => {
+                      typewriter
+                        .pause(2500)
+                        .typeString(
+                          "<span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#79c0ff;'>Themes:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#ff7b72;'>- 1.</span> HealthTech Innovation<br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#ffa657;'>- 2.</span> Smart City Solutions<br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#79c0ff;'>Tracks:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#ff7b72;'>- 1.</span> AI-Driven Web Development<br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#ffa657;'>- 2.</span> ML-Enhanced App Development"
+                        )
+                        .callFunction(() => hideCursor())
+                        .start();
+                    }}
+                  />
+                </div>
+              )}
+              {tab == 1 && (
+                <div className="absolute leading-loose text-sm p-2 top-0 left-0 h-full w-full overflow-y-auto no-scrollbar">
+                  <Typewriter
+                    options={{
+                      delay: 15,
+                      cursor: ".",
+                      cursorClassName: "custom_cursor",
+                    }}
+                    onInit={(typewriter) => {
+                      typewriter
 
-                      .typeString(
-                        "<span style='opacity:0.3;font-size:10px;'>[14.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Prizes :</span><br><span style='opacity:0.3;font-size:10px;'>[14.10.23]</span>   <span style='color:#79c0ff;'>--   #1  </span><span style='color:#ff7b72;'>Rs. 30,000</span><br><span style='opacity:0.3;font-size:10px;'>[14.10.23]</span><br><span style='opacity:0.3;font-size:10px;'>[14.10.23]</span>"
-                      )
-                      .pauseFor(2000)
-                      .typeString(
-                        " <span style='color:#ffa657;'>-- Certificates of participation for all attendees</span>"
-                      )
-                      .callFunction(() => hideCursor())
-                      .start();
-                  }}
-                />
-              </div>
-            )}
-          </div>
-        </div>
+                        .typeString(
+                          "<span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Registration Date:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#ff7b72;'>- From</span> <span style='color:#ffa657;'>08-09-2023</span> <span style='color:#ff7b72;'>To</span> <span style='color:#ffa657;'>- 24-09-2023</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Round 1:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#79c0ff;'>- 24 September, 2023 (4:00 PM - 5:00 PM)</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Round 1 Result:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#79c0ff;'>- 24 September, 2023 (7:00 PM)</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Round 2:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#79c0ff;'>- 24 September, 2023 (11:59 PM)</span> <span style='color:#ffa657;'>(Problem Statements will be given)</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Round 2 Submission:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#79c0ff;'>- 28th September, 2023</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Round 2 Result:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#79c0ff;'>- 30th September, 2023</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span> <span style='font-weight: bold;color:#ff7b72;'>Grand Finale:</span><br><span style='opacity:0.3;font-size:10px;'>[13.10.23]</span>   <span style='color:#ffa657;'>- 13th October, 2023</span> <span style='color:#ff7b72;'>and</span> <span style='color:#ffa657;'>14th October, 2023</span><br>"
+                        )
+                        .callFunction(() => hideCursor())
+                        .start();
+                    }}
+                  />
+                </div>
+              )}
+              {tab == 2 && (
+                <div className="absolute leading-loose text-sm p-2 top-0 left-0 h-full w-full">
+                  <Typewriter
+                    options={{
+                      delay: 15,
+                      cursor: ".",
+                      cursorClassName: "custom_cursor",
+                    }}
+                    onInit={(typewriter) => {
+                      typewriter
+
+                        .typeString(
+                          "<span style='opacity:0.3;font-size:10px;'>[14.10.23]</span> <span style='font-weight: bold;color:#7ee787;'>Prizes :</span><br><span style='opacity:0.3;font-size:10px;'>[14.10.23]</span>   <span style='color:#79c0ff;'>--   #1  </span><span style='color:#ff7b72;'>Rs. 30,000</span><br><span style='opacity:0.3;font-size:10px;'>[14.10.23]</span><br><span style='opacity:0.3;font-size:10px;'>[14.10.23]</span>"
+                        )
+                        .pauseFor(2000)
+                        .typeString(
+                          " <span style='color:#ffa657;'>-- Certificates of participation for all attendees</span>"
+                        )
+                        .callFunction(() => hideCursor())
+                        .start();
+                    }}
+                  />
+                </div>
+              )}
+            </div>
+          )}
+        </motion.div>
       </div>
     </div>
   );

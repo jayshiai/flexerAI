@@ -1,8 +1,14 @@
-const OrganiserBadge = ({ text }) => {
+const OrganiserBadge = ({ text, theme }) => {
   return (
-    <div className="w-[50px] h-[15px]  cursor-pointer rounded-full border-[#A418BA] border font-semibold text-[#A418BA] text-xs  flex justify-center items-center ">
+    <p
+      style={{
+        borderColor: `${theme}`,
+        color: `${theme}`,
+      }}
+      className="inline-block px-2 py-1 cursor-pointer text-center rounded-full  border font-semibold  text-xs  "
+    >
       {text}
-    </div>
+    </p>
   );
 };
 

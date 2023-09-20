@@ -12,8 +12,8 @@ const EventCardShort = () => {
     const middleX = rect.width / 2;
     const middleY = rect.height / 2;
 
-    const x = -1 * ((e.clientX - (rect.left + middleX)) / middleX) * 4;
-    const y = -1 * ((e.clientY - (rect.top + middleY)) / middleY) * 4;
+    const x = -1 * ((e.clientX - (rect.left + middleX)) / middleX) * 3;
+    const y = -1 * ((e.clientY - (rect.top + middleY)) / middleY) * 3;
 
     // Update position state
 
@@ -44,9 +44,11 @@ const EventCardShort = () => {
       ref={cardRef}
       style={{
         "--rotateY": `${rotation.x}deg`,
-        "--rotateX": `${rotation.y}deg`,
+        "--rotateX": `${-rotation.y}deg`,
+        "--gradientBefore": `#ffffff0f`,
+        "--gradientAfter": `#ffffffaa`,
       }}
-      className="eventCard w-[300px] h-[260px]"
+      className="eventCard w-full h-full"
     >
       <div className="eventCard-content"></div>
     </div>

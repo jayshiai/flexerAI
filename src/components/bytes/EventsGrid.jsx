@@ -5,12 +5,14 @@ import React, { useEffect, useRef } from "react";
 import EventCardShort from "./EventCardShort";
 import EventCardLong from "./EventCardLong";
 import GenAThon from "./GenAThon";
+import Overdrive from "./Overdrive";
 const EventsGrid = () => {
   const cardsRef = useRef(null);
 
   useEffect(() => {
     // Get cards element reference
     const cards = cardsRef.current;
+
     // Define mousemove handler function
     const handleOnMove = (e) => {
       // Loop through card elements
@@ -34,7 +36,7 @@ const EventsGrid = () => {
   }, []);
 
   return (
-    <div className="flex w-screen lg:w-[75vw] h-screen mt-4 relative">
+    <div className="flex w-screen lg:w-[75vw]  mt-4 relative">
       <div className="w-[8%] text-3xl flex justify-center relative">
         <div className="flex flex-col justify-center items-center absolute h-full">
           <GoBriefcase className="mt-4 mb-8" />
@@ -53,8 +55,16 @@ const EventsGrid = () => {
         </div>
       </div>
       <div className="w-full ">
-        <div id="eventCards" ref={cardsRef} className=" w-full max-w-[916px] ">
+        <div
+          id="eventCards"
+          ref={cardsRef}
+          className=" w-full  grid grid-cols-2 grid-rows-3 gap-4"
+        >
           <GenAThon />
+
+          <Overdrive />
+          <EventCardShort />
+          <EventCardShort />
         </div>
       </div>
     </div>

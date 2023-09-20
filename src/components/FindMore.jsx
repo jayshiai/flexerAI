@@ -759,7 +759,7 @@ const FindMore = () => {
           </span>
         </div>
         <div className="max-w-[300px] text-xl tracking-widest font-light">
-          10+ events to satisfy all your tech needs
+          15+ events to satisfy all your tech needs
         </div>
       </div>
     </div>
