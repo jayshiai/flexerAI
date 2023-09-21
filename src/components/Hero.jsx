@@ -905,15 +905,15 @@ const Hero = () => {
             />
             <path
               id="Subtract"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M649 622.501C649 639.346 635.344 653.001 618.5 653.001C616.192 653.001 613.944 652.745 611.783 652.26L611.645 653.254C613.852 653.743 616.146 654.001 618.5 654.001C635.897 654.001 650 639.898 650 622.501C650 618.443 649.232 614.564 647.835 611.001H646.757C648.203 614.55 649 618.433 649 622.501ZM599 645.955C592.278 640.36 588 631.93 588 622.501C588 605.657 601.655 592.001 618.5 592.001C626.437 592.001 633.665 595.033 639.091 600.001H640.545C634.864 594.434 627.083 591.001 618.5 591.001C601.103 591.001 587 605.104 587 622.501C587 632.535 591.691 641.473 599 647.242V645.955Z"
               fill="#A418BA"
             />
             <path
               id="Subtract_2"
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M618.5 655.001C636.449 655.001 651 640.451 651 622.501C651 614.729 648.271 607.594 643.72 602.001H649.906C653.759 607.893 656 614.936 656 622.501C656 643.212 639.21 660.001 618.5 660.001C615.867 660.001 613.297 659.73 610.817 659.214L611.507 654.247C613.76 654.741 616.099 655.001 618.5 655.001ZM608.308 653.371C595.351 649.096 586 636.891 586 622.501C586 604.552 600.551 590.001 618.5 590.001C627.717 590.001 636.037 593.838 641.952 600.001H648.503C641.661 590.893 630.768 585.001 618.5 585.001C597.789 585.001 581 601.791 581 622.501C581 639.368 592.135 653.634 607.455 658.348L608.308 653.371Z"
               fill="white"
             />
@@ -921,22 +921,22 @@ const Hero = () => {
 
           <g
             id="docking_lines"
-            clip-path="url(#clip0_53_462)"
+            clipPath="url(#clip0_53_462)"
             className="absoulte lg:block"
           >
             <path
               id="Vector_145"
               d="M44.5722 1418.77V1071.73"
               stroke="url(#paint0_linear_53_462)"
-              stroke-width="3"
-              stroke-linecap="round"
+              strokeWidth="3"
+              strokeLinecap="round"
             />
             <path
               id="Vector_146"
               d="M253 998V1022.4C253 1089.43 210.872 1143.77 158.905 1143.77H109.381C73.8243 1143.77 45 1180.95 45 1226.82V1261"
               stroke="url(#paint1_linear_53_462)"
-              stroke-width="3"
-              stroke-linecap="round"
+              strokeWidth="3"
+              strokeLinecap="round"
             />
             <circle id="Ellipse 1" cx="45" cy="1067" r="5" fill="#D9D9D9" />
             <circle id="Ellipse 2" cx="252" cy="994" r="5" fill="#D9D9D9" />
@@ -984,9 +984,9 @@ const Hero = () => {
             width="99.0057"
             height="99.0059"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"
@@ -1014,10 +1014,10 @@ const Hero = () => {
               ease: "easeOut",
             }}
           >
-            <stop stop-color="#D2A8FF" />
-            <stop offset="0.0908581" stop-color="#A371F7" />
-            <stop offset="0.50056" stop-color="#6639BA" />
-            <stop offset="0.8908581" stop-color="#A371F7" />
+            <stop stopColor="#D2A8FF" />
+            <stop offset="0.0908581" stopColor="#A371F7" />
+            <stop offset="0.50056" stopColor="#6639BA" />
+            <stop offset="0.8908581" stopColor="#A371F7" />
           </motion.linearGradient>
 
           <motion.linearGradient
@@ -1035,11 +1035,11 @@ const Hero = () => {
               ease: "easeIn",
             }}
           >
-            <stop stop-color="#A371F7" />
-            <stop offset="0.00733964" stop-color="#9E72D3" />
-            <stop offset="0.251918" stop-color="#6639BA" stop-opacity="0" />
-            <stop offset="0.325848" stop-color="#6639BA" />
-            <stop offset="0.90733964" stop-color="#9E72D3" />
+            <stop stopColor="#A371F7" />
+            <stop offset="0.00733964" stopColor="#9E72D3" />
+            <stop offset="0.251918" stopColor="#6639BA" stopOpacity="0" />
+            <stop offset="0.325848" stopColor="#6639BA" />
+            <stop offset="0.90733964" stopColor="#9E72D3" />
           </motion.linearGradient>
 
           <linearGradient
@@ -1050,16 +1050,12 @@ const Hero = () => {
             y2="659.498"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#824BEA" />
-            <stop offset="0.0001" stop-color="#824BEA" />
-            <stop offset="0.244792" stop-color="#6239B1" />
-            <stop offset="0.473958" stop-color="#7403A9" />
-            <stop
-              offset="0.71875"
-              stop-color="#A418BA"
-              stop-opacity="0.534653"
-            />
-            <stop offset="1" stop-color="#A418BA" />
+            <stop stopColor="#824BEA" />
+            <stop offset="0.0001" stopColor="#824BEA" />
+            <stop offset="0.244792" stopColor="#6239B1" />
+            <stop offset="0.473958" stopColor="#7403A9" />
+            <stop offset="0.71875" stopColor="#A418BA" stopOpacity="0.534653" />
+            <stop offset="1" stopColor="#A418BA" />
           </linearGradient>
           <clipPath id="clip0_53_462">
             <rect

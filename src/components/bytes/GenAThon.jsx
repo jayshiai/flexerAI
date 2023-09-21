@@ -63,10 +63,10 @@ const GenAThon = () => {
         "--gradientBefore": `#ffffff1f`,
         "--gradientAfter": `#ffffffaa`,
       }}
-      className="eventCard col-span-2 w-full h-[400px]"
+      className="eventCard col-span-1 md:col-span-2 w-3/4 md:w-full h-[800px] md:h-[400px]"
     >
-      <div className="eventCard-content flex">
-        <div className="w-1/2 pl-2 h-full flex flex-col justify-between">
+      <div className="eventCard-content flex flex-col-reverse items-center md:flex-row">
+        <div className="w-full mt-4 md:mt-0 md:w-1/2 pl-2 h-full flex flex-col justify-between">
           <div>
             <OrganiserBadge text="Elevate" theme="#7b1fa2" />
             <div
@@ -75,7 +75,7 @@ const GenAThon = () => {
                 "--c2": "#673ab7",
                 "--c3": "#f48fb1",
               }}
-              className="transText transBg mt-4 mb-8 font-bold text-6xl "
+              className="transText transBg mt-4 mb-8 font-bold text-4xl md:text-6xl "
             >
               Gen-A-Thon
             </div>
@@ -84,15 +84,20 @@ const GenAThon = () => {
               ML, Web Development, and App Development Hackathon!
             </div>
           </div>
-          <a className="w-[200px] h-[50px] mb-4  text-2xl  rounded-xl flex justify-center  items-center bg-[#7b1fa2] cursor-pointer">
+          <motion.a
+            whileTap={{ scale: 0.9 }}
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="w-[200px] h-[50px] mb-4  text-2xl  rounded-xl flex justify-center  items-center bg-[#7b1fa2] cursor-pointer"
+          >
             Register Now
-          </a>
+          </motion.a>
         </div>
         <motion.div
           drag={true}
           dragConstraints={{ top: 100, bottom: 100, left: 100, right: 100 }}
           dragSnapToOrigin={true}
-          className="codeBlock w-1/2  h-full relative flex flex-col justify-center items-center"
+          className="codeBlock w-full md:w-1/2  h-full relative flex flex-col justify-center items-center"
         >
           <div className="nav w-full border bg-[#101010] border-white/20 h-[10%] flex justify-between items-center px-2">
             <div className="list text-sm flex justify-around w-1/2 z-10">

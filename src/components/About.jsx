@@ -1,12 +1,15 @@
 "use client";
 import { HiArrowRight } from "react-icons/hi";
 import Tag from "./bytes/Tag";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FiCode } from "react-icons/fi";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useInView } from "framer-motion";
 const About = () => {
-  const [height, setHeight] = useState((250 / 1200) * window.innerWidth - 125);
+  const divRef = useRef(null);
+  const isInView = useInView(divRef);
+  const [height, setHeight] = useState(0);
 
   useEffect(() => {
     // Handler to call on window resize
@@ -17,15 +20,29 @@ const About = () => {
       setHeight(marginEdit);
     }
 
-    // Add event listener
-    window.addEventListener("resize", handleResize);
+    // Check if window is defined
+    if (typeof window !== "undefined") {
+      // Set initial height
+      setHeight((250 / 1200) * window.innerWidth - 125);
 
-    // Remove event listener on cleanup
-    return () => window.removeEventListener("resize", handleResize);
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }
+
+    // // Add event listener
+    // window.addEventListener("resize", handleResize);
+
+    // // Remove event listener on cleanup
+    // return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
     <div
+      ref={divRef}
+      id="about"
       className="flex lg:w-[75vw] mb-24"
       style={{ marginTop: `-${height}px` }}
     >
@@ -36,18 +53,33 @@ const About = () => {
             transform: `translate(0,${height + 5}px)`,
           }}
         >
-          <FiCode className="hidden md:block" />
+          <div className="relative text-blue-200">
+            <FiCode className="hidden md:block" />
+            <div className="absolute top-[-16px] left-0 -z-10 h-[64px] w-full bg-blue-500 blur-[30px]"></div>
+          </div>
           <motion.div
             style={{
               background: `linear-gradient(#d2a8ff, #a371f7 10%, #0C14CB 50%,  #188ABA)`,
             }}
-            animate={{ opacity: [0.4, 1] }}
+            initial={{ height: "0%" }}
+            animate={
+              isInView
+                ? { height: "100%", opacity: [0.4, 1] }
+                : { opacity: [0.4, 1] }
+            }
             transition={{
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: 2,
+              opacity: {
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 2,
+              },
+              height: {
+                duration: 2,
+                ease: "easeOut",
+              },
             }}
-            className="w-[3px] h-full rounded-xl"
+            exit={{ height: "0%" }}
+            className="w-[3px] h-[100%] rounded-xl"
           ></motion.div>
         </div>
       </div>
@@ -60,9 +92,14 @@ const About = () => {
           the annual science and technology festival of the Indian Institute of
           Information Technology, Nagpur.
         </div>
-        <a className="w-[200px] h-[50px] sm:w-[300px] sm:h-[70px] mb-16 text-3xl sm:text-5xl rounded-xl flex justify-center  items-center bg-[#BE30D5] cursor-pointer">
+        <motion.a
+          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.1 }}
+          transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          className="w-[200px] h-[50px] sm:w-[300px] sm:h-[70px] mb-16 text-3xl sm:text-5xl rounded-xl flex justify-center  items-center bg-[#BE30D5] cursor-pointer"
+        >
           Get Started
-        </a>
+        </motion.a>
         <div>
           <p className=" tracking-widest font-light opacity-30">
             Sponsored by leading organisations

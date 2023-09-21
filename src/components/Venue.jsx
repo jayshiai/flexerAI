@@ -88,14 +88,14 @@ const Venue = () => {
               border: 0,
               filter: `invert(90%) hue-rotate(180deg)`,
             }}
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
             className="h-full w-full  rounded-xl"
           ></iframe>
         </div>
-        <div class="card-body w-[90%] lg:w-[60%]">
-          <div class="card-content">
+        <div className="card-body w-[90%] lg:w-[60%]">
+          <div className="card-content">
             <h3 className=" text-sm tracking-wider font-semibold">ADDRESS</h3>
             <p>
               Survey No. 140,141/1 behind Br. Sheshrao Wankhade Shetkari Sahkari

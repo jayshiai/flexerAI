@@ -7,6 +7,7 @@ import { Vandal } from "./Vandal";
 import { Classic } from "./Classic";
 import { Knife } from "./Knife";
 import { TbSquareRotatedFilled } from "react-icons/tb";
+import { motion } from "framer-motion";
 const Overdrive = () => {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [selection, setSelection] = useState(0);
@@ -52,10 +53,10 @@ const Overdrive = () => {
       style={{
         "--rotateY": `${rotation.x}deg`,
         "--rotateX": `${-rotation.y}deg`,
-        "--gradientBefore": `#BD394444`,
+        "--gradientBefore": `#BD394422`,
         "--gradientAfter": `#BD3944aa`,
       }}
-      className="eventCard w-full row-span-2 h-[800px] select-none"
+      className="eventCard w-3/4 md:w-full row-span-1 md:row-span-2 h-[800px] select-none"
     >
       <div className="eventCard-content flex relative">
         <div
@@ -87,7 +88,7 @@ const Overdrive = () => {
               "--c2": "#BD3944",
               "--c3": "#D62964",
             }}
-            className="transText transBg mt-4 mb-8 font-bold text-6xl z-10"
+            className="transText transBg mt-4 mb-8 font-bold text-4xl  md:text-6xl z-10"
           >
             OverDrive
           </div>
@@ -101,7 +102,7 @@ const Overdrive = () => {
             <div className="menu w-1/4 h-3/4 flex flex-col justify-around">
               <div className="flex justify-start group items-center cursor-pointer relative">
                 <TbSquareRotatedFilled />
-                <p className="text-xl ml-2">Round 1</p>
+                <p className="text-lg xl:text-xl ml-2">Round 1</p>
 
                 <div className="absolute z-20 top-10 hidden group-hover:block w-[300px] bg-[#101010] p-4 rounded-2xl border border-teal-200">
                   <span className="text-xl font-bold">KnockOut:</span>
@@ -114,7 +115,7 @@ const Overdrive = () => {
               </div>
               <div className="flex justify-start group items-center cursor-pointer relative">
                 <TbSquareRotatedFilled />
-                <p className="text-xl ml-2">Round 2</p>
+                <p className="text-lg xl:text-xl ml-2">Round 2</p>
                 <div className="absolute z-20 bottom-10 hidden group-hover:block w-[300px] bg-[#101010] p-4 rounded-2xl border border-teal-200">
                   <span className="text-xl font-bold">Upper Bracs:</span>
                   <br></br>
@@ -124,12 +125,37 @@ const Overdrive = () => {
               </div>
               <div className="flex justify-start items-center cursor-pointer relative group">
                 <TbSquareRotatedFilled />
-                <p className="text-3xl font-extrabold text-[#FF4B50] ml-2">
+                <motion.a
+                  whileTap={{ scale: 0.9 }}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                  className="text-3xl font-extrabold text-[#FF4B50] ml-2"
+                >
                   PLAY
-                  <div className="absolute z-20 top-10 hidden text-xl group-hover:block w-[300px] bg-[#101010] p-4 rounded-2xl border border-teal-200">
-                    Join the fray!
+                </motion.a>
+                <div className="absolute text-[#FF4B50] z-20 top-10 hidden text-xl group-hover:block w-[300px] bg-[#101010] p-4 rounded-2xl border border-teal-200">
+                  <p> Join the fray!</p>
+                  <div className=" bottom-0 left-0 text-xs mb-2 flex">
+                    <p>Gas Fee</p>
+                    <img
+                      className="ml-2"
+                      src="/assets/creds.webp"
+                      alt="Creds"
+                    />
+                    <p className="ml-2 tracking-wider text-white">
+                      150 per team
+                    </p>
                   </div>
-                </p>
+                  <div className=" bottom-0 left-0 text-xs mb-2 flex">
+                    <p>Bounty</p>
+                    <img
+                      className="ml-2"
+                      src="/assets/creds.webp"
+                      alt="Creds"
+                    />
+                    <p className="ml-2 tracking-wider text-white">15,000</p>
+                  </div>
+                </div>
               </div>
             </div>
             <div className=" loadout pt-8 z-20 h-full w-2/5">

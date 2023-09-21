@@ -8,8 +8,9 @@ import GenAThon from "./GenAThon";
 import Overdrive from "./Overdrive";
 import Algorithma from "./Algorithma";
 import { useInView } from "framer-motion";
+import EventCardTall from "./EventCardTall";
 
-const EventsGrid = () => {
+const EventsGridExtended = () => {
   const cardsRef = useRef(null);
   const divRef = useRef(null);
   const isInView = useInView(divRef);
@@ -77,7 +78,7 @@ const EventsGrid = () => {
         <div
           id="eventCards"
           ref={cardsRef}
-          className=" w-full  grid place-items-center md:place-items-start grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-3 gap-4"
+          className=" w-full  grid place-items-center md:place-items-start grid-cols-2 grid-rows-9 md:grid-cols-2 md:grid-rows-13 gap-4"
         >
           <GenAThon />
 
@@ -85,10 +86,25 @@ const EventsGrid = () => {
 
           <Algorithma />
           <EventCardShort />
+
+          <EventCardLong />
+          <EventCardShort />
+          <EventCardShort />
+          <EventCardShort />
+          <EventCardShort />
+          <EventCardLong />
+          <EventCardShort />
+          <EventCardTall />
+          <EventCardTall />
+          <EventCardShort />
+          <EventCardLong />
+          <EventCardShort />
+          <EventCardTall />
+          <EventCardShort />
         </div>
       </div>
     </div>
   );
 };
 
-export default EventsGrid;
+export default EventsGridExtended;

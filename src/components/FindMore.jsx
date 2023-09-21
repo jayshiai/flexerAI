@@ -1,10 +1,22 @@
 "use client";
 import { motion } from "framer-motion";
 import { HiArrowRight } from "react-icons/hi";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
+import Link from "next/link";
 const FindMore = () => {
+  const divRef = useRef(null);
+  const isInView = useInView(divRef);
+
+  const arrowVaraints = {
+    hover: {
+      x: [-10, 10],
+      transition: { type: "spring", stiffness: 400, damping: 10 },
+    },
+  };
   return (
-    <div className="flex w-screen lg:w-[75vw] ">
-      <div className="absolute w-[100vw]  lg:w-[75vw]    flex justify-center items-center">
+    <div ref={divRef} className="flex w-screen lg:w-[75vw] ">
+      <div className="absolute -z-10 w-[100vw]  lg:w-[75vw]    flex justify-center items-center">
         <svg
           viewBox="0 0 430 348"
           fill="none"
@@ -596,17 +608,30 @@ const FindMore = () => {
         </svg>
       </div>
       <div className="w-[8%] text-3xl flex justify-center relative">
-        <div className="flex flex-col justify-center items-center absolute h-full">
+        <div className="flex flex-col  items-center absolute h-full">
           <motion.div
             style={{
-              background: `linear-gradient( #0C14CB 10%, #0C14CB 50%,  #188ABA)`,
+              background: `linear-gradient(#0D3A11, #0F8019, #0F971C)`,
             }}
-            animate={{ opacity: [0.4, 1] }}
+            initial={{ height: "0%" }}
+            animate={
+              isInView
+                ? { height: "100%", opacity: [0.4, 1] }
+                : { opacity: [0.4, 1] }
+            }
             transition={{
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: 2,
+              opacity: {
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 2,
+              },
+              height: {
+                delay: 0.1,
+                duration: 1,
+                ease: "easeOut",
+              },
             }}
+            exit={{ height: "0%" }}
             className="w-[3px] h-full rounded-xl"
           ></motion.div>
         </div>
@@ -619,7 +644,7 @@ const FindMore = () => {
             <path
               d="M2.00026 0L2.00014 33.5188C2.00005 61.0048 12.3542 87.4821 31.0001 107.676V107.676C49.6458 127.871 60 154.348 60 181.834V301.665C60 329.451 49.6629 356.243 31.0001 376.829V376.829C12.3373 397.414 2.00022 424.207 2.00016 451.993L2.00009 485"
               stroke="url(#paint0_linear_120_10499)"
-              stroke-width="3"
+              strokeWidth="3"
             />
             <g filter="url(#filter0_dddd_120_10499)">
               <circle
@@ -631,7 +656,7 @@ const FindMore = () => {
                 r="4.93806"
                 transform="matrix(1 0 0 -1 60.4381 242.562)"
                 stroke="white"
-                stroke-width="3"
+                strokeWidth="3"
               />
             </g>
             <defs>
@@ -642,9 +667,9 @@ const FindMore = () => {
                 width="52.876"
                 height="52.8762"
                 filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
+                colorInterpolationFilters="sRGB"
               >
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feFlood floodOpacity="0" result="BackgroundImageFix" />
                 <feColorMatrix
                   in="SourceAlpha"
                   type="matrix"
@@ -732,32 +757,34 @@ const FindMore = () => {
                 y2="485"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop
-                  offset="0.0515742"
-                  stop-color="#196C2E"
-                  stop-opacity="0"
-                />
-                <stop offset="0.225992" stop-color="#2EA043" />
-                <stop offset="0.47249" stop-color="#2EA043" />
-                <stop offset="0.522324" stop-color="#56D364" />
-                <stop offset="0.561417" stop-color="#2EA043" />
-                <stop offset="0.791714" stop-color="#2EA043" />
-                <stop offset="0.956186" stop-color="#196C2E" stop-opacity="0" />
+                <stop offset="0.0515742" stopColor="#196C2E" stopOpacity="0" />
+                <stop offset="0.225992" stopColor="#2EA043" />
+                <stop offset="0.47249" stopColor="#2EA043" />
+                <stop offset="0.522324" stopColor="#56D364" />
+                <stop offset="0.561417" stopColor="#2EA043" />
+                <stop offset="0.791714" stopColor="#2EA043" />
+                <stop offset="0.956186" stopColor="#196C2E" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
         </div>
       </div>
       <div className="w-full pl-[50px] mb-32">
-        <div className="mt-[125px] max-w-[140px] h-[35px] cursor-pointer rounded-full border-[#A418BA] border text-[#A418BA]  flex justify-center items-center">
+        <div className="mt-[125px] max-w-[140px] h-[35px] cursor-pointer rounded-full border-[#A418BA] border text-[#A418BA] hover:border-white hover:bg-[#A418BA] hover:text-white  flex justify-center items-center">
           Interested ?
         </div>
-        <div className=" flex mt-[25px] text-5xl sm:text-7xl font-semibold  mb-5 text-[#A418BA]">
-          Find More
-          <span className="ml-6">
-            <HiArrowRight />
-          </span>
-        </div>
+        <Link href="/events">
+          <motion.div
+            whileHover="hover"
+            className=" flex mt-[25px] text-5xl sm:text-7xl font-semibold  mb-5 text-[#A418BA] cursor-pointer"
+          >
+            Find More
+            <motion.span variants={arrowVaraints} className="ml-6">
+              <HiArrowRight />
+            </motion.span>
+          </motion.div>
+        </Link>
+
         <div className="max-w-[300px] text-xl tracking-widest font-light">
           15+ events to satisfy all your tech needs
         </div>

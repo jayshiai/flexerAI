@@ -45,10 +45,12 @@ const EventCardLong = ({ className }) => {
       style={{
         "--rotateY": `${rotation.x}deg`,
         "--rotateX": `${rotation.y}deg`,
+        "--gradientBefore": `#ffffff0f`,
+        "--gradientAfter": `#ffffffaa`,
       }}
-      className={`eventCard ${className} w-[600px] h-[260px]`}
+      className="eventCard w-full h-[400px] col-span-1 md:col-span-2"
     >
-      <div className="eventCard-content"></div>
+      <div className="eventCard-content "></div>
     </div>
   );
 };

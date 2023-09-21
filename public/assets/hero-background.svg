@@ -158,42 +158,42 @@
 <path id="Subtract_2" fill-rule="evenodd" clip-rule="evenodd" d="M618.5 655.001C636.449 655.001 651 640.451 651 622.501C651 614.729 648.271 607.594 643.72 602.001H649.906C653.759 607.893 656 614.936 656 622.501C656 643.212 639.21 660.001 618.5 660.001C615.867 660.001 613.297 659.73 610.817 659.214L611.507 654.247C613.76 654.741 616.099 655.001 618.5 655.001ZM608.308 653.371C595.351 649.096 586 636.891 586 622.501C586 604.552 600.551 590.001 618.5 590.001C627.717 590.001 636.037 593.838 641.952 600.001H648.503C641.661 590.893 630.768 585.001 618.5 585.001C597.789 585.001 581 601.791 581 622.501C581 639.368 592.135 653.634 607.455 658.348L608.308 653.371Z" fill="white"/>
 </g>
 <g id="docking_lines" clip-path="url(#clip0_53_462)">
-<path id="Vector_145" d="M44.5722 1418.77V1071.73" stroke="url(#paint0_linear_53_462)" stroke-width="3" stroke-linecap="round"/>
-<path id="Vector_146" d="M253 998V1022.4C253 1089.43 210.872 1143.77 158.905 1143.77H109.381C73.8243 1143.77 45 1180.95 45 1226.82V1261" stroke="url(#paint1_linear_53_462)" stroke-width="3" stroke-linecap="round"/>
+<path id="Vector_145" d="M44.5722 1418.77V1071.73" stroke="url(#paint0_linear_53_462)" strokeWidth="3" stroke-linecap="round"/>
+<path id="Vector_146" d="M253 998V1022.4C253 1089.43 210.872 1143.77 158.905 1143.77H109.381C73.8243 1143.77 45 1180.95 45 1226.82V1261" stroke="url(#paint1_linear_53_462)" strokeWidth="3" stroke-linecap="round"/>
 <circle id="Ellipse 1" cx="45" cy="1067" r="5" fill="#D9D9D9"/>
 <circle id="Ellipse 2" cx="252" cy="994" r="5" fill="#D9D9D9"/>
 </g>
 <g id="Reactor" filter="url(#filter0_f_53_462)">
-<circle cx="618.99" cy="621.997" r="41" transform="rotate(126.5 618.99 621.997)" stroke="url(#paint2_linear_53_462)" stroke-width="7"/>
+<circle cx="618.99" cy="621.997" r="41" transform="rotate(126.5 618.99 621.997)" stroke="url(#paint2_linear_53_462)" strokeWidth="7"/>
 </g>
 </g>
 <defs>
-<filter id="filter0_f_53_462" x="569.488" y="572.495" width="99.0057" height="99.0059" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<filter id="filter0_f_53_462" x="569.488" y="572.495" width="99.0057" height="99.0059" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+<feFlood floodOpacity="0" result="BackgroundImageFix"/>
 <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
 <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_53_462"/>
 </filter>
 <linearGradient id="paint0_linear_53_462" x1="45.0722" y1="1071.73" x2="45.0722" y2="1418.77" gradientUnits="userSpaceOnUse">
-<stop stop-color="#EEEEEE" stop-opacity="0"/>
-<stop offset="0.39877" stop-color="#EEEEEE"/>
-<stop offset="0.903725" stop-color="#EEEEEE"/>
+<stop stopColor="#EEEEEE" stopOpacity="0"/>
+<stop offset="0.39877" stopColor="#EEEEEE"/>
+<stop offset="0.903725" stopColor="#EEEEEE"/>
 </linearGradient>
 <linearGradient id="paint1_linear_53_462" x1="-19.8762" y1="1337.53" x2="310.259" y2="1051.67" gradientUnits="userSpaceOnUse">
-<stop offset="0.368568" stop-color="white"/>
-<stop offset="0.515596" stop-color="#C2C2C2"/>
-<stop offset="0.836805" stop-color="#515151"/>
-<stop offset="0.990832" stop-color="#323232"/>
-<stop offset="0.990932" stop-color="#ABABAB" stop-opacity="0"/>
-<stop offset="1" stop-color="#6639BA" stop-opacity="0"/>
-<stop offset="1" stop-opacity="0"/>
+<stop offset="0.368568" stopColor="white"/>
+<stop offset="0.515596" stopColor="#C2C2C2"/>
+<stop offset="0.836805" stopColor="#515151"/>
+<stop offset="0.990832" stopColor="#323232"/>
+<stop offset="0.990932" stopColor="#ABABAB" stopOpacity="0"/>
+<stop offset="1" stopColor="#6639BA" stopOpacity="0"/>
+<stop offset="1" stopOpacity="0"/>
 </linearGradient>
 <linearGradient id="paint2_linear_53_462" x1="618.991" y1="584.498" x2="618.991" y2="659.498" gradientUnits="userSpaceOnUse">
-<stop stop-color="#824BEA"/>
-<stop offset="0.0001" stop-color="#824BEA"/>
-<stop offset="0.244792" stop-color="#6239B1"/>
-<stop offset="0.473958" stop-color="#7403A9"/>
-<stop offset="0.71875" stop-color="#A418BA" stop-opacity="0.534653"/>
-<stop offset="1" stop-color="#A418BA"/>
+<stop stopColor="#824BEA"/>
+<stop offset="0.0001" stopColor="#824BEA"/>
+<stop offset="0.244792" stopColor="#6239B1"/>
+<stop offset="0.473958" stopColor="#7403A9"/>
+<stop offset="0.71875" stopColor="#A418BA" stopOpacity="0.534653"/>
+<stop offset="1" stopColor="#A418BA"/>
 </linearGradient>
 <clipPath id="clip0_53_462">
 <rect width="346" height="530" fill="white" transform="translate(34 890)"/>

@@ -4,15 +4,21 @@ const Navbar = () => {
   return (
     <nav className="hidden lg:block w-screen absolute z-50">
       <div className="navbar  text-white w-[80vw] h-24 flex justify-around m-auto items-center ">
-        <div className="font-extrabold text-lg opacity-50 cursor-pointer hover:opacity-100">
+        <a
+          href="#events"
+          className="font-extrabold text-lg opacity-50 cursor-pointer hover:opacity-100"
+        >
           EVENTS
-        </div>
+        </a>
 
         <TbSquareRotatedFilled className="opacity-50" />
 
-        <div className="font-extrabold text-lg opacity-50 cursor-pointer hover:opacity-100">
+        <a
+          href="#about"
+          className="font-extrabold text-lg opacity-50 cursor-pointer hover:opacity-100"
+        >
           ABOUT
-        </div>
+        </a>
 
         <TbSquareRotatedFilled className="opacity-50" />
 
@@ -23,15 +29,21 @@ const Navbar = () => {
 
         <TbSquareRotatedFilled className="opacity-50" />
 
-        <div className="font-extrabold text-lg opacity-50 cursor-pointer hover:opacity-100">
+        <a
+          href="#speakers"
+          className="font-extrabold text-lg opacity-50 cursor-pointer hover:opacity-100"
+        >
           SPEAKERS
-        </div>
+        </a>
 
         <TbSquareRotatedFilled className="opacity-50" />
 
-        <div className="font-extrabold text-lg opacity-50 cursor-pointer hover:opacity-100">
+        <a
+          href="#contact"
+          className="font-extrabold text-lg opacity-50 cursor-pointer hover:opacity-100"
+        >
           CONTACT
-        </div>
+        </a>
       </div>
     </nav>
   );
