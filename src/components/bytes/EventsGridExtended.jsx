@@ -93,44 +93,57 @@ const EventsGridExtended = () => {
             theme={["#0F971C", "#0F8019", "#0D3A11"]}
           />
 
-          <EventCardLong />
+          <EventCardLong
+            organizer="IoTics"
+            title="Robo-Rumble"
+            details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
+"
+            theme={["#7b1fa2", "#673ab7", "#f48fb1"]}
+          />
+
+          <EventCardShort
+            organizer="IoTics"
+            title="Robo-Rumble"
+            details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
+"
+            theme={["#ffbe0b", "#fb5607", "#fcbf49"]}
+          />
+          <EventCardTall
+            organizer="IoTics"
+            title="Robo-Rumble"
+            details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
+"
+            theme={["#FD4556", "#BD3944", "#D62964"]}
+          />
+
+          <EventCardTall
+            organizer="IoTics"
+            title="Robo-Rumble"
+            details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
+"
+            theme={["#0F971C", "#0F8019", "#0D3A11"]}
+          />
+          <EventCardShort
+            organizer="IoTics"
+            title="Robo-Rumble"
+            details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
+"
+            theme={["#0F971C", "#0F8019", "#0D3A11"]}
+          />
+          <EventCardLong
+            organizer="IoTics"
+            title="Robo-Rumble"
+            details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
+"
+            theme={["#0F971C", "#0F8019", "#0D3A11"]}
+          />
 
           <EventCardShort
             organizer="IoTics"
             title="Robo-Rumble"
             details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
 "
-            theme={["#0F971C", "#0F8019", "#0D3A11"]}
-          />
-          <EventCardTall
-            organizer="IoTics"
-            title="Robo-Rumble"
-            details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
-"
-            theme={["#0F971C", "#0F8019", "#0D3A11"]}
-          />
-
-          <EventCardTall
-            organizer="IoTics"
-            title="Robo-Rumble"
-            details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
-"
-            theme={["#0F971C", "#0F8019", "#0D3A11"]}
-          />
-          <EventCardShort
-            organizer="IoTics"
-            title="Robo-Rumble"
-            details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
-"
-            theme={["#0F971C", "#0F8019", "#0D3A11"]}
-          />
-          <EventCardLong />
-          <EventCardShort
-            organizer="IoTics"
-            title="Robo-Rumble"
-            details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
-"
-            theme={["#0F971C", "#0F8019", "#0D3A11"]}
+            theme={["#ffbe0b", "#fb5607", "#fcbf49"]}
           />
           <EventCardTall
             organizer="IoTics"
@@ -144,7 +157,7 @@ const EventsGridExtended = () => {
             title="Robo-Rumble"
             details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
 "
-            theme={["#0F971C", "#0F8019", "#0D3A11"]}
+            theme={["#FD4556", "#BD3944", "#D62964"]}
           />
         </div>
       </div>
