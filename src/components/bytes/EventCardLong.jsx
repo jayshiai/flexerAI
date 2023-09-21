@@ -48,9 +48,9 @@ const EventCardLong = ({ className }) => {
         "--gradientBefore": `#ffffff0f`,
         "--gradientAfter": `#ffffffaa`,
       }}
-      className="eventCard w-full h-[400px] col-span-1 md:col-span-2"
+      className="eventCard col-span-1 md:col-span-2 w-3/4 md:w-full h-[800px] md:h-[400px] "
     >
-      <div className="eventCard-content "></div>
+      <div className="eventCard-content flex flex-col md:flex-row"></div>
     </div>
   );
 };
