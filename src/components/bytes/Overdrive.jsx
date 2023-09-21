@@ -8,6 +8,8 @@ import { Classic } from "./Classic";
 import { Knife } from "./Knife";
 import { TbSquareRotatedFilled } from "react-icons/tb";
 import { motion } from "framer-motion";
+import { Suspense } from "react";
+import Loading from "../Loading";
 const Overdrive = () => {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const [selection, setSelection] = useState(0);
@@ -59,27 +61,34 @@ const Overdrive = () => {
       className="eventCard w-3/4 md:w-full row-span-1 md:row-span-2 h-[800px] select-none"
     >
       <div className="eventCard-content flex relative">
-        <div
-          className={`
+        <Suspense fallback={<Loading />}>
+          <div
+            className={`
         ${selection == 0 ? "block" : "hidden"}
         absolute top-0 left-0 h-full w-full`}
-        >
-          <GunsCanvas item={<Knife position={[0, -0.2, -1.75]} />} />
-        </div>
-        <div
-          className={`
+          >
+            <GunsCanvas item={<Knife position={[0, -0.2, -1.75]} />} />
+          </div>
+        </Suspense>
+        <Suspense fallback={<Loading />}>
+          <div
+            className={`
         ${selection == 1 ? "block" : "hidden"}
         absolute top-0 left-0 h-full w-full`}
-        >
-          <GunsCanvas item={<Classic />} />
-        </div>
-        <div
-          className={`
+          >
+            <GunsCanvas item={<Classic />} />
+          </div>
+        </Suspense>
+        <Suspense fallback={<Loading />}>
+          <div
+            className={`
         ${selection == 2 ? "block" : "hidden"}
         absolute top-0 left-0 h-full w-full`}
-        >
-          <GunsCanvas item={<Vandal />} />
-        </div>
+          >
+            <GunsCanvas item={<Vandal />} />
+          </div>
+        </Suspense>
+
         <div className="w-full pl-2 flex flex-col items-start ">
           <OrganiserBadge text="TF Management" theme="#BD3944" />
           <div

@@ -14,6 +14,7 @@ export default function Home() {
       <Hero />
       <About />
       <Events />
+
       <EventsGrid />
       <FindMore />
       <Speakers />
