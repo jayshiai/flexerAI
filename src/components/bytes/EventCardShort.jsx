@@ -48,7 +48,7 @@ const EventCardShort = () => {
         "--gradientBefore": `#ffffff0f`,
         "--gradientAfter": `#ffffffaa`,
       }}
-      className="eventCard w-full h-[400px] row-span-1 col-span-1"
+      className="eventCard w-full h-[800px] md:h-[400px] row-span-1 col-span-1"
     >
       <div className="eventCard-content"></div>
     </div>

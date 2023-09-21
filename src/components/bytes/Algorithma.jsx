@@ -50,7 +50,7 @@ const Algorithma = () => {
         "--gradientBefore": `#ffbe0b33`,
         "--gradientAfter": `#ffbe0baa`,
       }}
-      className="eventCard w-3/4 md:w-full h-[400px]"
+      className="eventCard w-3/4 md:w-full h-[800px] md:h-[400px]"
     >
       <div className="eventCard-content p-2 relative">
         <OrganiserBadge text="DotSlash" theme="#fb5607" />

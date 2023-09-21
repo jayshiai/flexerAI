@@ -100,7 +100,7 @@ const GenAThon = () => {
           className="codeBlock w-full md:w-1/2  h-full relative flex flex-col justify-center items-center"
         >
           <div className="nav w-full border bg-[#101010] border-white/20 h-[10%] flex justify-between items-center px-2">
-            <div className="list text-sm flex justify-around w-1/2 z-10">
+            <div className="list text-xs sm:text-sm flex justify-around w-3/4 sm:w-1/2 z-10">
               <button
                 type="button"
                 onClick={() => setTab(0)}
