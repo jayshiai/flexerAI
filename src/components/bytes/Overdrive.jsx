@@ -81,15 +81,13 @@ const Overdrive = () => {
           </div>
         </Suspense>
 
-        {selection == 3 && (
-          <div
-            className={`
+        <div
+          className={`
         ${selection == 2 ? "block" : "hidden"}
         absolute top-0 left-0 h-full w-full`}
-          >
-            <GunsCanvas item={<Vandal />} />
-          </div>
-        )}
+        >
+          <GunsCanvas item={<Vandal />} />
+        </div>
 
         <div className="w-full pl-2 flex flex-col items-start ">
           <OrganiserBadge text="TF Management" theme="#BD3944" />
