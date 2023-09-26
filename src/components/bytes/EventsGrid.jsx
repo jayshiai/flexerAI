@@ -79,11 +79,10 @@ const EventsGrid = () => {
           ref={cardsRef}
           className=" w-full  grid place-items-center md:place-items-start grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-3 gap-4"
         >
-          <GenAThon />
-
+          <Algorithma />
           <Overdrive />
 
-          <Algorithma />
+          <GenAThon />
           <EventCardShort
             organizer="IoTics"
             title="Robo-Rumble"

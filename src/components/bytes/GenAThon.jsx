@@ -100,9 +100,9 @@ const GenAThon = () => {
           </Link>
         </div>
         <motion.div
-          drag={true}
-          dragConstraints={{ top: 100, bottom: 100, left: 100, right: 100 }}
-          dragSnapToOrigin={true}
+          // drag={true}
+          // dragConstraints={{ top: 100, bottom: 100, left: 100, right: 100 }}
+          // dragSnapToOrigin={true}
           className="codeBlock w-full md:w-1/2  h-full relative flex flex-col justify-center items-center"
         >
           <div className="nav w-full border bg-[#101010] border-white/20 h-[10%] flex justify-between items-center px-2">
