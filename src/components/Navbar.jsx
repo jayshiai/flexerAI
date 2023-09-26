@@ -23,7 +23,7 @@ const Navbar = () => {
 
         <TbSquareRotatedFilled className="opacity-50" />
         <Link href="/">
-          <Image src="/assets/logoText.png" height={250} width={250} />
+          <Image src="/assets/logoText.png" height={300} width={300} />
         </Link>
         <TbSquareRotatedFilled className="opacity-50" />
 
