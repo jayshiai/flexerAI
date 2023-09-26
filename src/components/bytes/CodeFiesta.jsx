@@ -62,13 +62,24 @@ const CodeFiesta = ({ theme }) => {
           }}
           className="eventGimmick w-full mt-4 md:mt-0 md:w-1/2 pl-2 h-full md:h-full "
         >
-          <div className=" bg-transparent h-full w-full flex flex-col justify-center">
+          <motion.div
+            animate={{
+              y: [-10, 10, -10],
+
+              transition: {
+                repeat: Infinity,
+                ease: "linear",
+                duration: 3,
+              },
+            }}
+            className=" bg-transparent h-full w-full flex flex-col justify-center"
+          >
             <Image
               src="/assets/banner/cf_banner.svg"
               height={400}
               width={400}
             />
-          </div>
+          </motion.div>
         </div>
         <div className="w-full h-2/3 md:h-full   md:w-1/2 flex flex-col justify-between">
           <div className="">
