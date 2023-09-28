@@ -56,18 +56,25 @@ const GPT5 = ({ theme }) => {
       className="eventCard col-span-1 md:col-span-2 w-3/4 md:w-full h-[800px] md:h-[400px] "
     >
       <div className="eventCard-content flex flex-col-reverse md:flex-row">
-        <div
-          style={{
-            "--rotateY": `${-rotation.x * 3}deg`,
-            "--rotateX": `${rotation.y * 3}deg`,
-          }}
-          className="eventGimmick w-full mt-4 md:mt-0 md:w-1/2 pl-2 h-1/2 md:h-full "
-        >
-          <div className=" bg-transparent h-full w-full flex flex-col justify-center mb-5">
+        <div className="relative w-full mt-4 md:mt-0 md:w-1/2 pl-2 h-1/2 md:h-full ">
+          <div
+            style={{
+              "--rotateY": `${-rotation.x * 7}deg`,
+              "--rotateX": `${rotation.y * 3}deg`,
+            }}
+            className=" eventGimmick absolute top-0 left-0 z-50 bg-transparent h-full w-full flex flex-col justify-center items-center mb-5 "
+          >
             <Image
               src="/assets/banner/gpt5_banner.png"
-              height={595}
-              width={445}
+              height={230}
+              width={230}
+            />
+          </div>
+          <div className="absolute top-0 left-0 bg-transparent h-full w-full flex flex-col justify-center items-center mb-5 ">
+            <Image
+              src="/assets/banner/crispr_logo.png"
+              height={500}
+              width={500}
             />
           </div>
         </div>
@@ -89,10 +96,7 @@ const GPT5 = ({ theme }) => {
               new world.
             </div>
           </div>
-          <Link
-            href="https://unstop.com/hackathons/gen-a-thon-tantrafiesta-23-iiit-nagpur-760544"
-            target="_blank"
-          >
+          <Link href="/events/gpt3" target="_blank">
             <motion.div
               whileTap={{ scale: 0.9 }}
               whileHover={{ scale: 1.1 }}
@@ -102,7 +106,7 @@ const GPT5 = ({ theme }) => {
               }}
               className="w-[200px] h-[50px] mb-4  text-2xl  rounded-xl flex justify-center  items-center cursor-pointer"
             >
-              Register Now
+              Learn More
             </motion.div>
           </Link>
         </div>

@@ -3,7 +3,16 @@
 import { useState, useEffect, useRef } from "react";
 import OrganiserBadge from "./OrganiserBadge";
 import Image from "next/image";
-const EventCardShort = ({ organizer, title, details, theme, logo }) => {
+import Link from "next/link";
+const EventCardShort = ({
+  organizer,
+  title,
+  details,
+  theme,
+  logo,
+  textColor,
+  url,
+}) => {
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
   const cardRef = useRef(null);
 
@@ -66,21 +75,24 @@ const EventCardShort = ({ organizer, title, details, theme, logo }) => {
             "--c2": `${theme[1]}`,
             "--c3": `${theme[2]}`,
           }}
-          className="transText transBg whitespace-nowrap overflow-hidden mt-4 mb-7 font-bold pb-1 text-4xl sm:text-6xl z-10"
+          className="transText transBg whitespace-nowrap overflow-hidden mt-4 mb-7 font-bold pb-1 text-4xl md:text-5xl z-10"
         >
           {title}
         </div>
         <div className="tracking-wider text-base sm:text-lg xl:text-xl opacity-50 w-full md:w-3/4">
           {details}
         </div>
-        <div
-          style={{
-            backgroundColor: `${theme[1]}`,
-          }}
-          className="group mt-8 font-bold cursor-pointer text-2xl w-[150px] h-[50px] flex justify-center items-center rounded-3xl"
-        >
-          <p>Learn More</p>
-        </div>
+        <Link href={url} target="_blank">
+          <div
+            style={{
+              backgroundColor: `${theme[1]}`,
+              color: `${textColor ? textColor : "white"}`,
+            }}
+            className="group mt-8 font-bold cursor-pointer text-2xl w-[150px] h-[50px] flex justify-center items-center rounded-3xl"
+          >
+            <p>Learn More</p>
+          </div>
+        </Link>
       </div>
     </div>
   );

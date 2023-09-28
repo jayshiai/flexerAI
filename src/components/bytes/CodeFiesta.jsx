@@ -100,22 +100,29 @@ const CodeFiesta = ({ theme }) => {
               CodeFiesta 2023.
             </div>
           </div>
-          <Link
-            href="https://unstop.com/hackathons/gen-a-thon-tantrafiesta-23-iiit-nagpur-760544"
-            target="_blank"
-          >
-            <motion.div
-              whileTap={{ scale: 0.9 }}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-              style={{
-                backgroundColor: `${theme[0]}`,
-              }}
-              className="w-[200px] h-[50px] mt-8 md:mt-0 mb-4  text-2xl  rounded-xl flex justify-center  items-center cursor-pointer"
-            >
-              Register Now
-            </motion.div>
-          </Link>
+          <div className="flex md:flex-row flex-col justify-between items-center">
+            <Link href="/events/codefiesta" target="_blank">
+              <motion.div
+                whileTap={{ scale: 0.9 }}
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                style={{
+                  backgroundColor: `${theme[0]}`,
+                }}
+                className="w-[200px] h-[50px] mt-8 md:mt-0 mb-4  text-2xl  rounded-xl flex justify-center  items-center cursor-pointer"
+              >
+                Learn More
+              </motion.div>
+            </Link>
+            <Link href="https://www.geeksforgeeks.org/" target="_blank">
+              <Image
+                className="z-50 mb-4 ml-2 md:mr-10"
+                src="/assets/logo/gfg_logo.svg"
+                height={25}
+                width={250}
+              />
+            </Link>
+          </div>
         </div>
       </div>
     </div>
