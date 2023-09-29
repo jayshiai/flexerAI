@@ -76,7 +76,7 @@ const EventsGrid = () => {
         <div
           id="eventCards"
           ref={cardsRef}
-          className=" w-full  grid place-items-center md:place-items-start grid-cols-1 grid-rows-5 md:grid-cols-2 md:grid-rows-4 gap-4"
+          className="   w-full  grid place-items-center md:place-items-start grid-cols-1 md:grid-cols-2 md:grid-rows-4 gap-4"
         >
           <Algorithma theme={["#ffbe0b", "#fb5607", "#fcbf49"]} />
 
@@ -84,20 +84,21 @@ const EventsGrid = () => {
           <EventCardShort
             organizer="Dimensions"
             title="Blender Blitz"
-            details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta."
+            details="Step into the mesmerizing world of CG Animation and let your creativity soar! It's a canvas for you to showcase your artistic skills like never before."
             theme={["#90e0ef", "#00b4d8", "#0077b6"]}
             logo="/assets/logo/dimensions_logo.svg"
             textColor="#000000"
+            url="/events/blender"
           />
 
           <EventCardShort
             organizer="IoTics"
             title="Byte Craft"
-            details="Robo Rumble is an adrenaline-pumping experience of robo cars rumbling down the track. Join in on the sheer excitement of Robo Rumble at TantraFiesta.
-"
+            details="Unlock the future of technology at IOTICS – ByteCraft!  ByteCraft challenges you to integrate hardware and software using the latest advancements in AI and IoT technologies"
             theme={["#AAAAAA", "#FFFFFF", "#555555"]}
             logo="/assets/logo/iotics_logo.svg"
             textColor="#000000"
+            url="/events/byte"
           />
           <CodeFiesta theme={["#0F971C", "#0F8019", "#0D3A11"]} />
         </div>

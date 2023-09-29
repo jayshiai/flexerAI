@@ -92,18 +92,21 @@ const About = () => {
         <div className="text-5xl sm:text-7xl font-semibold mt-16 mb-10">
           TantraFiest is
         </div>
-        <div className="tracking-wider font-light text-xl sm:text-3xl  w-[80%] opacity-50 mb-16">
-          the annual science and technology festival of the Indian Institute of
-          Information Technology, Nagpur.
+        <div className="tracking-wider font-light text-xl sm:text-2xl  w-[80%] opacity-50 mb-16">
+          the flagship annual technical extravaganza proudly presented by the
+          Indian Institute of Information Technology Nagpur (IIITN). With a rich
+          tradition of promoting research, problem-solving skills, and fostering
+          a sense of community among tech enthusiasts, Tantra Fiesta has evolved
+          into a premier event on the tech calendar.
         </div>
-        <Link href="/events">
+        <Link href="/team">
           <motion.div
             whileTap={{ scale: 0.9 }}
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            className="w-[200px] h-[50px] sm:w-[300px] sm:h-[70px] mb-16 text-3xl sm:text-5xl rounded-xl flex justify-center  items-center bg-[#BE30D5] cursor-pointer"
+            className="w-[200px] h-[50px] sm:w-[300px] sm:h-[70px] mb-16 text-xl sm:text-4xl rounded-xl flex justify-center  items-center bg-[#BE30D5] cursor-pointer"
           >
-            Get Started
+            Meet The Team
           </motion.div>
         </Link>
         <div>
@@ -111,20 +114,12 @@ const About = () => {
             Sponsored by leading organisations
           </p>
           <div className="flex lg:flex-row flex-col justify-start mt-3 items-start lg:items-center w-1/2">
-            <div className="w-full  min-w-[400px] flex justify-start mt-3 items-center">
+            <div className="w-full  min-w-[350px] flex justify-start mt-3 items-center">
               <Image
                 src="/assets/logo/tsecond_logo.svg"
                 height={50}
-                width={143}
+                width={100}
               />
-              <Image
-                className="ml-4"
-                src="/assets/logo/gfg_logo.svg"
-                height={50}
-                width={250}
-              />
-            </div>
-            <div className="w-full min-w-[300px] flex justify-start mt-3 items-center">
               <Image
                 className="ml-0 lg:ml-4"
                 src="/assets/logo/ninjas_logo.png"
@@ -134,9 +129,17 @@ const About = () => {
 
               <Image
                 className="ml-4"
-                src="/assets/logo/ntpc_logo.svg"
+                src="/assets/logo/ntpc_logo.png"
                 height={50}
                 width={75}
+              />
+            </div>
+            <div className="w-full min-w-[300px] flex justify-start mt-3 items-center">
+              <Image
+                className="ml-4"
+                src="/assets/logo/gfg_logo.svg"
+                height={40}
+                width={200}
               />
               <Image
                 className="ml-4"

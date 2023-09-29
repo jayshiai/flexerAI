@@ -54,7 +54,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="w-[90vw] mx-8 lg:w-[75vw] border border-white/20 bg-transparent  rounded-3xl p-4 flex flex-col justify-center items-center">
+    <div
+      id="contact"
+      className="w-[90vw] mx-8 lg:w-[75vw] border border-white/20 bg-transparent  rounded-3xl p-4 flex flex-col justify-center items-center"
+    >
       <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
@@ -135,7 +138,7 @@ const Contact = () => {
                     typewriter
                       .pauseFor(2500)
                       .typeString(
-                        "Hello there!<br>I'll be taking your query<br><br>"
+                        "Contact Nos. <br>+91 6377121184<br>+91 9307005165<br><br>Hello there!<br>I'll be taking your query<br><br>"
                       )
 
                       .pauseFor(1500)
