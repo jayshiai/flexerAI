@@ -40,8 +40,8 @@ const page = () => {
           title="Hospitality"
           theme={["#0F971C", "#0F8019", "#0D3A11"]}
         >
-          <LeadSlate name="Siddh Jain" />
-          <LeadSlate name="Krishna" />
+          <LeadSlate name="Siddh Jain" phone="+91 72064 98895" />
+          <LeadSlate name="Krishna" phone="+91 87882 68288" />
           <CoLeadSlate name="Nishchint Kamath" />
         </TitleCard>
         <TitleCard
@@ -49,15 +49,15 @@ const page = () => {
           theme={["#FD4556", "#BD3944", "#D62964"]}
         >
           <LeadSlate name="Pranav " />
-          <LeadSlate name="Tanmay Rokde" />
-          <LeadSlate name="Saket Sanadhya" />
+          <LeadSlate name="Tanmay Rokde" phone="+91 91792 66570" />
+          <LeadSlate name="Saket Sanadhya" phone="+91 6377 121 184" />
           <CoLeadSlate name="Soham" />
           <CoLeadSlate name="Tushar Pandole" />
-          <CoLeadSlate name="Imtiyaz Khan " />
+          <CoLeadSlate name="Imtiyaz Khan" />
         </TitleCard>
         <TitleCard title="Security" theme={["#AAAAAA", "#FFFFFF", "#555555"]}>
-          <LeadSlate name="Yash Patidar" />
-          <CoLeadSlate name="Yash Natani" />
+          <LeadSlate name="Yash Patidar" phone="+91 6376 540 711" />
+          <CoLeadSlate name="Yash Natani" phone="+91 79873 86670" />
         </TitleCard>
         <TitleCard title="Web Dev" theme={["#90e0ef", "#00b4d8", "#0077b6"]}>
           <LeadSlate name="Jayvardhan Patil" />
@@ -75,9 +75,9 @@ const page = () => {
         </TitleCard>
 
         <TitleCard title="Corporate" theme={["#ffbe0b", "#fb5607", "#fcbf49"]}>
-          <LeadSlate name="Deepak Singh Chauhan " />
-          <CoLeadSlate name="Vraj Talati" />
-          <CoLeadSlate name="Harsh Bajaj" />
+          <LeadSlate name="Deepak Singh Chauhan " phone="+91 91402 64090" />
+          <CoLeadSlate name="Vraj Talati" phone="+91 97125 68699" />
+          <CoLeadSlate name="Harsh Bajaj" phone="+91 84475 37313" />
         </TitleCard>
         <TitleCard title="Content" theme={["#90e0ef", "#00b4d8", "#0077b6"]}>
           <LeadSlate name="Suyash Mahajan " />
